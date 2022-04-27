@@ -1,0 +1,13 @@
+package KieRule;
+
+import com.demo.ProjectForTechDemo.entity.User;
+
+dialect "mvel";
+
+rule "Bank Account"
+salience 9
+when
+user : User(BankAccountExists == false);
+then
+System.out.println("Bank Account Rule bank account does not exists")
+end;
